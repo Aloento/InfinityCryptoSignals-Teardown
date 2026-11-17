@@ -2,7 +2,7 @@
 
 **中文** · [English](README.en.md) · [在线报告](index.html) · [English report](en/index.html)
 
-我买了两年的 **Infinity Signals VIP 💎** 订阅（High Leverage / Long Term 两个频道），
+我买了 **Infinity Signals VIP 💎** 的订阅（High Leverage / Long Term 两个频道），
 但从来没用过。与其猜，不如把两个频道的**全部历史消息**抓下来，用交易所的分钟级 K 线逐笔重放一遍，
 看看这些信号到底赚不赚钱。
 

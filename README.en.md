@@ -2,8 +2,7 @@
 
 [中文](README.md) · **English** · [中文报告](index.html) · [English report](en/index.html)
 
-I paid for a two-year **Infinity Signals VIP 💎** subscription (two channels: *High Leverage* and
-*Long Term*) and never used it. Rather than guess whether it works, I pulled the **entire message
+I paid for an **Infinity Signals VIP 💎** subscription (two channels: *High Leverage* and *Long Term*) and never used it. Rather than guess whether it works, I pulled the **entire message
 history** of both channels and replayed every signal against exchange minute candles.
 
 **It does not work.**
