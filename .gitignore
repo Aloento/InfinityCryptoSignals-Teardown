@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+session/
+*.session
+*.session-journal
+*.parquet
+data/raw/
+out/
+.DS_Store
