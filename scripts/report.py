@@ -105,11 +105,11 @@ TXT = {
     s8="8 · 所以这 500 块买到了什么",
     s8card="<div class='card'><h2>8 · 结论：别买</h2>\n<p><b>它没有止损。</b>止损恒定在开仓价 ±50%，四年不变，和杠杆无关——等于告诉你“亏到一半再说”。\n真正的出场规则是“下一条反向信号”，而那一下永远是最贵的：翻了四次仓，0.4% 的止盈赚回来的都不够填一次。</p>\n<p><b>它没有可执行的边际。</b>把每条信号的方向随机翻转、止盈阶梯同步镜像，时间品种翻仓节奏全不动，\n真实流只赢过 12% 的随机流。也就是说：它讲不出任何东西，你付钱买的是掷硬币，而且硬币是有偏的。</p>\n<p><b>它没有诚实的账本。</b>晒单数字是 <code>(止盈价/开仓价−1)×杠杆</code> 的算术，与宣称值相关 0.9973；\n四年里删掉 8,004 / 19,454 条消息，被删消息里紧跟在平仓结算之后的比例是基线的 2.3 倍。</p>\n<p><b>它标价 500 美元。</b></p>\n<p>已经买了：别用它的杠杆，别信它的胜率，把这 500 美元当学费，不要再续费。<br>\n还没买：省下这笔钱。同样的四年，买 BTC 现货放着不动，或者买指数基金，都比你跟着这套信号活得久。</p>\n<p class='note'>数据都在 <code>data/</code> 里，逐笔可查，任何人都能复算上面每一个数字；想换口径改\n<code>scripts/backtest.py</code> 的参数重跑就行。</p></div>",
     s9="复现",
-    repro=("python scripts/scrape.py   --channel <id>\\n"
-           "python scripts/parse.py    --channel <id>\\n"
-           "python scripts/bulk.py     --from-signals <id> --interval 1m\\n"
-           "python scripts/backtest.py --channel <id> --entry market --interval 1m\\n"
-           "python scripts/benchmark.py --channel <id> --seeds 8\\n"
+    repro=("python scripts/scrape.py   --channel &lt;id&gt;\\n"
+           "python scripts/parse.py    --channel &lt;id&gt;\\n"
+           "python scripts/bulk.py     --from-signals &lt;id&gt; --interval 1m\\n"
+           "python scripts/backtest.py --channel &lt;id&gt; --entry market --interval 1m\\n"
+           "python scripts/benchmark.py --channel &lt;id&gt; --seeds 8\\n"
            "python scripts/report.py"),
     fx_equity="净值曲线 · High Leverage · 1x", fy_equity="累计 PnL（% 名义本金）",
     fx_monthly="逐月 PnL · High Leverage", fy_monthly="月度 PnL（% 名义）",
@@ -186,11 +186,11 @@ TXT = {
     s8="8 · So what did the $500 buy",
     s8card="<div class='card'><h2>8 · Conclusion: don't buy it</h2>\n<p><b>It has no stop loss.</b> The stop sits at ±50% from entry, unchanged for four years, independent of leverage —\nwhich is the same as saying “let it run until it has halved”. The real exit is the next opposite signal, and that exit\nis always the expensive one: four flips later, the 0.4% targets have not paid for a single one of them.</p>\n<p><b>It has no executable edge.</b> Flip every direction at random, mirror the ladder, keep timing, symbols and flip schedule:\nthe real stream beats only 12% of the random streams. You are paying for a coin toss — and the coin is biased.</p>\n<p><b>It has no honest ledger.</b> The announced numbers are <code>(target/entry−1)×leverage</code>, correlation 0.9973 with\nwhat was announced; 8,004 / 19,454 messages were deleted in four years, and deletions cluster 2.3x on the settlement message\nthat follows a close.</p>\n<p><b>It costs $500.</b></p>\n<p>Already subscribed: do not use its leverage, do not trust its win rate, write the $500 off as tuition, and do not renew.<br>\nNot subscribed yet: keep the money. Buy spot BTC and forget it, or buy an index fund — either would have outlived this signal feed.</p>\n<p class='note'>Every number above can be recomputed from <code>data/</code>; change the parameters in\n<code>scripts/backtest.py</code> to re-run any model.</p></div>",
     s9="Reproduce",
-    repro=("python scripts/scrape.py   --channel <id>\\n"
-           "python scripts/parse.py    --channel <id>\\n"
-           "python scripts/bulk.py     --from-signals <id> --interval 1m\\n"
-           "python scripts/backtest.py --channel <id> --entry market --interval 1m\\n"
-           "python scripts/benchmark.py --channel <id> --seeds 8\\n"
+    repro=("python scripts/scrape.py   --channel &lt;id&gt;\\n"
+           "python scripts/parse.py    --channel &lt;id&gt;\\n"
+           "python scripts/bulk.py     --from-signals &lt;id&gt; --interval 1m\\n"
+           "python scripts/backtest.py --channel &lt;id&gt; --entry market --interval 1m\\n"
+           "python scripts/benchmark.py --channel &lt;id&gt; --seeds 8\\n"
            "python scripts/report.py"),
     fx_equity="Equity curve · High Leverage · 1x", fy_equity="Cumulative PnL (% of notional)",
     fx_monthly="Monthly PnL · High Leverage", fy_monthly="Monthly PnL (% of notional)",
