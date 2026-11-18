@@ -44,16 +44,9 @@ TXT = {
     title="把 500 美元的“开单信号”拆开看",
     sub="Telegram 频道全量历史（MTProto 直连抓取）· Binance USDⓈ-M 合约分钟级 K 线回放 · 2022-08 → 2026-11",
     verdict_title="结论",
-    verdict=(
-        "<p class='verdict'>两个频道是两种不同的失败方式。<br>"
-        "<b>Infinity Signals VIP 💎 High Leverage</b>（{n_hl:,} 笔）：每一年、每个方向都在亏。"
-        "1 倍杠杆扣费后单笔 <b>{avg_hl:+.3f}%</b>，胜率 {win_hl:.1f}% 看着还行，"
-        "但盈亏比只有 {pf_hl:.2f} —— 赚小钱、亏大钱。按它自己写的 50–125x 做，"
-        "<b>{liq_hl:.0f}% 的单子直接爆仓</b>，单笔保证金平均 {avg_axi:+.1f}%。<br>"
-        "<b>Infinity Signals VIP 💎 Long Term</b>（{n_lt:,} 笔）：单笔均值 <b>{avg_lt:+.3f}%</b>"
-        "（t=2.58，勉强算微弱正期望），但中位数是 <b>{med_lt:+.2f}%</b>，"
-        "全部利润来自最赚的那 1% 交易（贡献 114%）。按它写的 20x 做，"
-        "<b>{liq_lt:.0f}% 爆仓</b>，单笔保证金平均 {avg_l20:+.1f}%。</p>"),
+    h1='别买：把 500 美元的 Telegram 开单信号回测了四年',
+    banner="<div class='buy-warning'><b>别买。</b> 如果你正在看这个服务的订阅页，这就是你要的证据：26,009 条信号、148,308 条消息、四年、逐笔重算。它不赚钱，而且它自己知道怎么让账本看起来赚钱。</div>",
+    verdict="<p class='verdict'>两个频道，两种亏法，没有一个能交易。<br><b>Infinity Signals VIP 💎 High Leverage</b>（{n_hl:,} 笔）：四年里每一年、每个方向都在亏。1 倍杠杆扣掉正常手续费后单笔 <b>{avg_hl:+.3f}%</b>，胜率 {win_hl:.1f}% 只是止盈阶梯发出来的假象——盈亏比 {pf_hl:.2f}，赚的时候赚 0.4%，亏的时候没有底。按它自己写的 50–125x 做，<b>{liq_hl:.0f}% 的单子当场爆仓</b>，单笔保证金平均 <b>{avg_axi:+.1f}%</b>。这不是交易，是给交易所交学费。<br><b>Infinity Signals VIP 💎 Long Term</b>（{n_lt:,} 笔）：单笔 <b>{avg_lt:+.3f}%</b> 是四年里唯一的正数，但中位数 <b>{med_lt:+.2f}%</b>，全部利润来自最赚的 1% 的交易（贡献 114%）。按它写的 20x 做，<b>{liq_lt:.0f}% 爆仓</b>。它是一张彩票，不是一套策略。</p>",
     th=["频道", "样本", "胜率", "单笔均值", "单笔中位数", "盈亏比", "平均命中TP", "平均持仓", "宣传杠杆下爆仓率"],
     s1="1 · 抓到了什么",
     th1=["频道", "信号", "消息总数", "起始", "结束", "品种", "ID 空洞（被删）"],
@@ -110,13 +103,7 @@ TXT = {
            "比如 ATOM 报 0.164，而当时 ATOM 是 11.5。这类单子已经剔出统计。"
            "按它宣传的 20x 做，{liq:.0f}% 的仓位会被强平，单笔均值 {avg20:+.1f}% 保证金。"),
     s8="8 · 所以这 500 块买到了什么",
-    p8=("对 High Leverage 来说，买到的是一个<b>赔率固定、且赔率为负</b>的机械系统，"
-        "外加一套把 0.4% 的止盈乘上杠杆写成 “Profit: 240%”的话术。它既没有止损（止损在 −50%），"
-        "也没有可执行的优势（方向镜像测试通不过），唯一“有效”的部分是止盈阶梯制造出来的高胜率错觉。"),
-    p8b=("如果你就是想拿它当信号源，唯一能活下来的用法是：<b>只用 Long Term、仓位按 1x 折算、"
-         "单笔风险上限 1% 账户、把 100 多个品种的并发控制住</b>——即便这样，期望也只有每笔 +0.17%，"
-         "扣掉你自己的滑点和资金占用，基本等于白干。"),
-    p8c=("数据都在 <code>data/</code> 里，逐笔可查；想换口径改 <code>scripts/backtest.py</code> 的参数重跑就行。"),
+    s8card="<div class='card'><h2>8 · 结论：别买</h2>\n<p><b>它没有止损。</b>止损恒定在开仓价 ±50%，四年不变，和杠杆无关——等于告诉你“亏到一半再说”。\n真正的出场规则是“下一条反向信号”，而那一下永远是最贵的：翻了四次仓，0.4% 的止盈赚回来的都不够填一次。</p>\n<p><b>它没有可执行的边际。</b>把每条信号的方向随机翻转、止盈阶梯同步镜像，时间品种翻仓节奏全不动，\n真实流只赢过 12% 的随机流。也就是说：它讲不出任何东西，你付钱买的是掷硬币，而且硬币是有偏的。</p>\n<p><b>它没有诚实的账本。</b>晒单数字是 <code>(止盈价/开仓价−1)×杠杆</code> 的算术，与宣称值相关 0.9973；\n四年里删掉 8,004 / 19,454 条消息，被删消息里紧跟在平仓结算之后的比例是基线的 2.3 倍。</p>\n<p><b>它标价 500 美元。</b></p>\n<p>已经买了：别用它的杠杆，别信它的胜率，把这 500 美元当学费，不要再续费。<br>\n还没买：省下这笔钱。同样的四年，买 BTC 现货放着不动，或者买指数基金，都比你跟着这套信号活得久。</p>\n<p class='note'>数据都在 <code>data/</code> 里，逐笔可查，任何人都能复算上面每一个数字；想换口径改\n<code>scripts/backtest.py</code> 的参数重跑就行。</p></div>",
     s9="复现",
     repro=("python scripts/scrape.py   --channel <id>\\n"
            "python scripts/parse.py    --channel <id>\\n"
@@ -137,18 +124,12 @@ TXT = {
     lang="English",
 ),
 "en": dict(
-    title="Tearing apart a $500/monthly telegram signal service",
+    title="Tearing apart a $500 Telegram signal service",
     sub="Full channel history via MTProto · Binance USDⓈ-M 1-minute candles replay · Aug 2022 → Nov 2026",
     verdict_title="Verdict",
-    verdict=(
-        "<p class='verdict'>Two channels, two different ways to fail.<br>"
-        "<b>Infinity Signals VIP 💎 High Leverage</b> ({n_hl:,} trades): losing in every single year and in both directions. "
-        "At 1x, after fees, the average trade is <b>{avg_hl:+.3f}%</b>; the {win_hl:.1f}% win rate looks fine until you see "
-        "the profit factor of {pf_hl:.2f} — small wins, large losses. Traded at the advertised 50–125x, "
-        "<b>{liq_hl:.0f}% of positions are liquidated</b>, average {avg_axi:+.1f}% of margin per trade.<br>"
-        "<b>Infinity Signals VIP 💎 Long Term</b> ({n_lt:,} trades): mean <b>{avg_lt:+.3f}%</b> (t=2.58, a thin edge), "
-        "but the median is <b>{med_lt:+.2f}%</b> and the best 1% of trades produce 114% of all profit. "
-        "Traded at its advertised 20x, <b>{liq_lt:.0f}% get liquidated</b>, average {avg_l20:+.1f}% of margin.</p>"),
+    h1="Don't buy it: four years of a $500 Telegram signal service, backtested",
+    banner="<div class='buy-warning'><b>Don't buy it.</b> If you are on the subscription page of this service, this is the evidence: 26,009 signals, 148,308 messages, four years, replayed trade by trade. It does not make money — and it knows exactly how to make the ledger look like it does.</div>",
+    verdict="<p class='verdict'>Two channels, two ways to lose, not one of them tradable.<br><b>Infinity Signals VIP 💎 High Leverage</b> ({n_hl:,} trades): losing in every year, in both directions. At 1x, after normal fees, <b>{avg_hl:+.3f}%</b> per trade. The {win_hl:.1f}% win rate is manufactured by the take-profit ladder — profit factor {pf_hl:.2f}: wins are 0.4%, losses have no floor. At the 50–125x it advertises, <b>{liq_hl:.0f}% of positions are liquidated on the spot</b>, averaging <b>{avg_axi:+.1f}%</b> of margin. That is not trading, it is tuition paid to the exchange.<br><b>Infinity Signals VIP 💎 Long Term</b> ({n_lt:,} trades): <b>{avg_lt:+.3f}%</b> per trade is the only positive number in four years, but the median is <b>{med_lt:+.2f}%</b> and the best 1% of trades produce 114% of all profit. At the advertised 20x, <b>{liq_lt:.0f}% get liquidated</b>. It is a lottery ticket, not a strategy.</p>",
     th=["Channel", "Trades", "Win rate", "Mean", "Median", "Profit factor", "Avg TPs hit", "Avg hold", "Liq. rate @ advertised lev."],
     s1="1 · What was collected",
     th1=["Channel", "Signals", "Messages", "From", "To", "Symbols", "Missing IDs (deleted)"],
@@ -203,13 +184,7 @@ TXT = {
            "Example: ATOM quoted at 0.164 while ATOM traded at 11.5 that minute. Those are excluded. "
            "At the advertised 20x, {liq:.0f}% of positions get liquidated, {avg20:+.1f}% of margin per trade."),
     s8="8 · So what did the $500 buy",
-    p8=("For High Leverage: a mechanical system with a <b>fixed and negative</b> payoff, wrapped in copy that multiplies a 0.4% "
-        "target by leverage and prints “Profit: 240%”. No stop loss (it is 50% away), no executable edge "
-        "(it fails the direction-mirror test). The only thing that “works” is the high win rate the ladder manufactures."),
-    p8b=("If you insist on using it as a feed, the only survivable configuration is: <b>Long Term only, 1x notional, "
-         "risk 1% of the account per trade, and cap the concurrency</b>. Even then the expectancy is +0.17% per trade — "
-         "your own slippage and capital drag eat it."),
-    p8c=("All trade-level data is in <code>data/</code>; change the parameters in <code>scripts/backtest.py</code> to re-run any model."),
+    s8card="<div class='card'><h2>8 · Conclusion: don't buy it</h2>\n<p><b>It has no stop loss.</b> The stop sits at ±50% from entry, unchanged for four years, independent of leverage —\nwhich is the same as saying “let it run until it has halved”. The real exit is the next opposite signal, and that exit\nis always the expensive one: four flips later, the 0.4% targets have not paid for a single one of them.</p>\n<p><b>It has no executable edge.</b> Flip every direction at random, mirror the ladder, keep timing, symbols and flip schedule:\nthe real stream beats only 12% of the random streams. You are paying for a coin toss — and the coin is biased.</p>\n<p><b>It has no honest ledger.</b> The announced numbers are <code>(target/entry−1)×leverage</code>, correlation 0.9973 with\nwhat was announced; 8,004 / 19,454 messages were deleted in four years, and deletions cluster 2.3x on the settlement message\nthat follows a close.</p>\n<p><b>It costs $500.</b></p>\n<p>Already subscribed: do not use its leverage, do not trust its win rate, write the $500 off as tuition, and do not renew.<br>\nNot subscribed yet: keep the money. Buy spot BTC and forget it, or buy an index fund — either would have outlived this signal feed.</p>\n<p class='note'>Every number above can be recomputed from <code>data/</code>; change the parameters in\n<code>scripts/backtest.py</code> to re-run any model.</p></div>",
     s9="Reproduce",
     repro=("python scripts/scrape.py   --channel <id>\\n"
            "python scripts/parse.py    --channel <id>\\n"
@@ -374,7 +349,7 @@ def deletion_context(msgs):
 def tbl(rows, headers):
     h = "".join(f"<th>{x}</th>" for x in headers)
     b = "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows)
-    return f"<table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table>"
+    return f"<div class=\"tw\"><table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table></div>"
 
 
 CSS = """
@@ -417,7 +392,7 @@ def build(lang, out_root, img_rel, img_dir):
     avg_l20 = 100 * f_l20["ret_lev"].mean()
 
     H = []
-    H.append(f"<h1>{t['title']}</h1><p class='sub'>{t['sub']}</p>")
+    H.append(f"<h1>{t['h1']}</h1>{t['banner']}<p class='sub'>{t['sub']}</p>")
 
     H.append("<div class='card'><h2>" + t["verdict_title"] + "</h2>")
     H.append(t["verdict"].format(n_hl=s_hl["n"], avg_hl=s_hl["avg"], win_hl=s_hl["win"], pf_hl=s_hl["pf"],
@@ -521,8 +496,7 @@ def build(lang, out_root, img_rel, img_dir):
     H.append("<p class='note'>" + t["note7"].format(nbad=nbad, badpct=100 * nbad / len(allt),
                                                     liq=liq_lt, avg20=avg_l20) + "</p></div>")
 
-    H.append("<div class='card'><h2>" + t["s8"] + "</h2>")
-    H.append("<p>" + t["p8"] + "</p><p>" + t["p8b"] + "</p><p>" + t["p8c"] + "</p></div>")
+    H.append(t["s8card"])
     H.append("<div class='card'><h2>" + t["s9"] + "</h2><pre>" + t["repro"] + "</pre></div>")
 
     other = "en/index.html" if lang == "zh" else "../index.html"
